@@ -1,0 +1,152 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: all 0.5s ease;
+}
+
+/* Dark Mode */
+body.dark {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: #f5f5f5;
+}
+
+/* Theme Switch */
+.theme-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ffce00;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-switch:hover {
+  background-color: #ffd633;
+}
+
+/* Container */
+.container {
+  background: #fff;
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+body.dark .container {
+  background: #333;
+  color: #f5f5f5;
+}
+
+/* Title */
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #6a11cb;
+  margin-bottom: 20px;
+}
+
+body.dark .title {
+  color: #FAF0E6;
+}
+
+/* Input Section */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+  border-color: #6a11cb;
+  box-shadow: 0px 0px 8px rgba(106, 17, 203, 0.5);
+}
+
+/* Button */
+.calculate-btn {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.calculate-btn:active {
+  transform: scale(0.95); /* Efek menekan */
+}
+
+.calculate-btn:hover {
+  background: linear-gradient(to right, #008B8B, #FFA07A);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Output Section */
+.result, .error {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.result {
+  color: #9ACD32;
+}
+
+.error {
+  color: #9ACD32;
+}
+
+/* Animasi Fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
